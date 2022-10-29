@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+ <input class="btn" type="submit">
+        <a href="{% url 'movieapp:detail' movie.id %}"><input style="background-color:black;color:white" class="btn btn-submit" type="button" value="Cancel" ></a><br>
+
+</form>
+
+
+{% endblock %}
